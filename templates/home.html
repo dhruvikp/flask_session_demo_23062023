@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <h1>:: Login ::</h1>
+
+    {% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{message}} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    {% if error == "True" %}
+        <div>
+            Wrong username password
+        </div>
+    {% endif %}
+
+    <form action="/login" method="post">
+        Username: <input type="text" name="username" id="username" /><br/>
+        Password: <input type="password" name="password" id="password" /><br/>
+
+        <button type="submit"> Submit </button>
+    </form>
+
+</body>
+
+
+</html>

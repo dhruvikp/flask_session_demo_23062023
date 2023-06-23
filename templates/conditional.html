@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1> conditions in Jinja </h1>
+    {% if company == "Apple" %}
+        <h2>Available Products under Apple</h2>
+        <ul>
+            <li>iPhone</li>
+            <li>iPad</li>
+            <li>iMac</li>
+        </ul>
+    {% elif company == "Microsoft" %}
+    <h2>Available Products under Microsoft</h2>
+    <ul>
+        <li>Surface pro</li>
+        <li>XBox</li>
+        <li>Windows Phone</li>
+    </ul>
+    {% else %}
+        <p>No {{company}} products Available.</p>
+    {% endif %}
+</body>
+</html>>
